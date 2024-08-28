@@ -33,19 +33,19 @@ h2 {
 }
 
 #led-lavagem.active {
-    background-color: #2196F3;
+    background-color: #2196F3; /* Azul */
 }
 
 #led-enxague.active {
-    background-color: #4CAF50;
+    background-color: #4CAF50; /* Verde */
 }
 
 #led-centrifugacao.active {
-    background-color: #FFC107;
+    background-color: #FFC107; /* Amarelo */
 }
 
 #led-secagem.active {
-    background-color: #FF5722;
+    background-color: #FF5722; /* Laranja */
 }
 
 #controls button {
