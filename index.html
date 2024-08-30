@@ -9,19 +9,25 @@
 <body>
     <div id="machine-panel">
         <h2>Painel da Máquina de Lavar</h2>
+        <div id="digital-display">
+            <span id="door-status">Porta: Fechada</span>
+        </div>
         <div id="leds">
-            <div class="led" id="led-lavagem">Lavagem</div>
-            <div class="led" id="led-enxague">Enxágue</div>
-            <div class="led" id="led-centrifugacao">Centrifugação</div>
-            <div class="led" id="led-secagem">Secagem</div>
+            <div class="led" id="led-lavagem"></div>
+            <span>Lavagem</span>
+            <div class="led" id="led-enxague"></div>
+            <span>Enxágue</span>
+            <div class="led" id="led-centrifugacao"></div>
+            <span>Centrifugação</span>
+            <div class="led" id="led-secagem"></div>
+            <span>Secagem</span>
         </div>
         <div id="controls">
-            <button id="start-button" onclick="startMachine()">Iniciar</button>
-            <button id="skip-button" onclick="skipTask()" disabled>Pular Tarefa</button>
+            <button id="start-button" class="round-button" onclick="startMachine()">Iniciar</button>
+            <button id="skip-button" class="round-button" onclick="skipTask()" disabled>Pular</button>
         </div>
         <div id="door-control">
-            <span id="door-status">Porta: Fechada</span>
-            <button id="door-button" onclick="toggleDoor()">Abrir Porta</button>
+            <button id="door-button" class="round-button" onclick="toggleDoor()">Abrir Porta</button>
         </div>
     </div>
     <script src="script.js"></script>

@@ -1,67 +1,108 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 #machine-panel {
-    width: 300px;
-    margin: 100px auto;
+    width: 380px;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 16px;
     text-align: center;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #dfe6ed;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid #a0b0c0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
 }
 
 h2 {
     margin-bottom: 20px;
+    font-size: 22px;
+    color: #333;
+}
+
+#digital-display {
+    width: 80%; /* Ajusta a largura para centralizar melhor */
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #000;
+    color: #0f0;
+    font-family: 'Digital-7', sans-serif;
+    font-size: 24px;
+    border-radius: 8px;
+    text-align: center;
 }
 
 #leds {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
     margin-bottom: 20px;
 }
 
 .led {
-    padding: 10px;
-    margin: 5px;
-    background-color: #ccc;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #888;
+    margin: 0 auto;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.led.active {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 #led-lavagem.active {
-    background-color: #2196F3; /* Azul */
+    background-color: #2196F3;
 }
 
 #led-enxague.active {
-    background-color: #4CAF50; /* Verde */
+    background-color: #4CAF50;
 }
 
 #led-centrifugacao.active {
-    background-color: #FFC107; /* Amarelo */
+    background-color: #FFC107;
 }
 
 #led-secagem.active {
-    background-color: #FF5722; /* Laranja */
+    background-color: #FF5722;
 }
 
-#controls button {
-    padding: 10px 20px;
-    margin: 10px;
-    font-size: 1em;
-    cursor: pointer;
-    background-color: #4CAF50;
+#controls {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    width: 100%; /* Garante que os botões ocupem toda a largura */
+}
+
+.round-button {
+    width: 60px;
+    height: 60px;
+    background-color: #42a5f5;
     color: white;
     border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-#controls button:disabled {
-    background-color: #ccc;
+.round-button:hover {
+    background-color: #1e88e5;
+    transform: scale(1.05);
+}
+
+.round-button:disabled {
+    background-color: #b0bec5;
     cursor: not-allowed;
 }
 
@@ -69,24 +110,14 @@ h2 {
     margin-top: 20px;
 }
 
-#door-status {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
 #door-button {
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    background-color: #f44336;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    background-color: #ef5350;
 }
 
 #door-button.open {
-    background-color: #4CAF50;
+    background-color: #66bb6a;
+}
+
+#door-button.open:hover {
+    background-color: #43a047;
 }
